@@ -1,0 +1,11 @@
+.table{
+    padding: 20px;
+    height: 100%;
+}
+
+.table__inner{
+    background: white;
+    min-height: calc(100vh - 83px);
+    border-radius: 6px;
+    padding: 10px;
+}
