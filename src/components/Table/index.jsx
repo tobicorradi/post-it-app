@@ -2,13 +2,16 @@ import React, {useState} from 'react'
 import ModalContent from '../ModalContent'
 import PostIt from '../PostIt'
 import './Table.css'
+import { useSelector, useDispatch } from 'react-redux'
+
 const Table = () => {
-   const postList = [{id: 1, text: 'This is a sample text', color: '#33333'}, {id: 2, text: 'This is a sample text', color: '#33333'}]
+    const dispatch = useDispatch()
+    const state = useSelector(state => state.postList)
     return (
         <section className="table">
             <div className="table__inner">
                <ModalContent />
-               {postList.map(post => <PostIt text={post.text}/>)}
+               {state.map(post => <PostIt text={post.text}/>)}
             </div>
         </section>
     )

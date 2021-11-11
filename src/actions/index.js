@@ -1,4 +1,4 @@
-export const createPost = (payload) =>{ 
+export const createPost = (payload) => ({ 
     type: 'ADD_POST',
     payload
-}
+})
