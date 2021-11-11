@@ -11,8 +11,7 @@ const ModalContent = () => {
 
     return (
         <>
-            You have no Post It notes created
-            <Button onClick={handleButton} text={'Crear Post It'} />
+            <Button onClick={handleButton} text={'Create Post It'} />
             <Modal isOpen={modalIsOpen} ariaHideApp={false}>
                 <h2>Crea tu post it</h2>
                 <form>
