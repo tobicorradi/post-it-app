@@ -5,13 +5,18 @@
     min-height: 10em;
     max-width: 176px;
     cursor: grab;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: .15s box-shadow ease-in-out;
+ }
+ .post-it.dragging{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  }
  .post-it p {
     font-family: helvetica;
     font-size: 1.2em;
     font-weight: bold;
   }
- .post-it:after {
+ /* .post-it:after {
     content: "";
     position: absolute;
     bottom: -2em;
@@ -29,4 +34,4 @@
     border-width: 2em 2em 0 0;
     border-style: solid;
     border-color: #d3b100 transparent;
- }
+ } */
