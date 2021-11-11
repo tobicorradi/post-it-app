@@ -1,10 +1,13 @@
 import React from 'react'
+import Draggable from 'react-draggable'
 import './PostIt.css'
 const PostIt = ({text, color}) => {
     return (
-        <div className="post-it">
-            <p>{text}</p>
-        </div>
+        <Draggable>
+            <div className="post-it">
+                <p>{text}</p>
+            </div>
+        </Draggable>
     )
 }
 
