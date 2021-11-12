@@ -13,12 +13,12 @@ const ModalContent = () => {
         text: '',
         color: '',
     })
-    const handleButton = () => {
+    const handleModal = () => {
         setModalIsOpen(!modalIsOpen)
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        handleButton()
+        handleModal()
         dispatch(createPost(newPost))
     }
     const handleChange = (e) => {
@@ -31,14 +31,14 @@ const ModalContent = () => {
     const colorOptions = ['#66e0ff', '#66e0ff', '#66e0ff', '#66e0ff']
     return (
         <>
-            <Button onClick={handleButton} text={'Create Post It'} />
+            <Button onClick={handleModal} text={'Create Post It'} />
             <Modal isOpen={modalIsOpen} ariaHideApp={false}>
                 <h2>Crea tu post it</h2>
                 <form onSubmit={handleSubmit}>
                     {colorOptions.map((color, index) => <input key={index} onChange={handleChange} type="radio" value={color} name="color" />)}
                     <textarea onChange={handleChange} name="text" placeholder="Terminar feature..."></textarea>
                 </form>
-                <Button onClick={handleButton} text={'Cancel'} />
+                <Button onClick={handleModal} text={'Cancel'} />
                 <Button type={'submit'} onClick={handleSubmit} text={'Guardar'} />
             </Modal>
         </>
