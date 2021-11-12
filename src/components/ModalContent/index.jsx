@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 import Button from '../Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { createPost, deleteAllPosts } from '../../actions'
+import toast, { Toaster } from 'react-hot-toast';
 
 const ModalContent = () => {
     const dispatch = useDispatch()
@@ -20,6 +21,7 @@ const ModalContent = () => {
         e.preventDefault()
         handleModal()
         dispatch(createPost(newPost))
+        toast.success('Post It Created!')
     }
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -33,6 +35,7 @@ const ModalContent = () => {
         <>
             <Button style={{marginRight: 7}} onClick={handleModal} text={'Create Post It'} />
             <Button onClick={() => dispatch(deleteAllPosts())} text={'Delete all'} />
+            <Toaster position="bottom-left" reverseOrder={false}/>
             <Modal isOpen={modalIsOpen} ariaHideApp={false}>
                 <h2>Crea tu post it</h2>
                 <form onSubmit={handleSubmit}>
