@@ -7,7 +7,7 @@ const PostIt = ({text, color}) => {
         setIsDragging(!isDragging)
     }
     return (
-        <Draggable onStart={handleDrag} onStop={handleDrag}>
+        <Draggable bounds='parent' onStart={handleDrag} onStop={handleDrag}>
             <div className={`post-it ${ isDragging ? 'dragging' : ''}`}>
                 <p>{text}</p>
             </div>
