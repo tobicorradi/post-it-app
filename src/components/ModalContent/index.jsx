@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Modal from 'react-modal'
 import Button from '../Button'
 import { useDispatch, useSelector } from 'react-redux'
-import { createPost } from '../../actions'
+import { createPost, deleteAllPosts } from '../../actions'
 
 const ModalContent = () => {
     const dispatch = useDispatch()
@@ -31,7 +31,8 @@ const ModalContent = () => {
     const colorOptions = ['#66e0ff', '#66e0ff', '#66e0ff', '#66e0ff']
     return (
         <>
-            <Button onClick={handleModal} text={'Create Post It'} />
+            <Button style={{marginRight: 7}} onClick={handleModal} text={'Create Post It'} />
+            <Button onClick={() => dispatch(deleteAllPosts())} text={'Delete all'} />
             <Modal isOpen={modalIsOpen} ariaHideApp={false}>
                 <h2>Crea tu post it</h2>
                 <form onSubmit={handleSubmit}>

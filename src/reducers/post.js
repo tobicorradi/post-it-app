@@ -10,6 +10,11 @@ const postReducer = (state = initialState, action) => {
                 ...state,
                 postList: addedPost
             }
+        case 'DELETE_ALL':
+            return {
+                ...state,
+                postList: []
+            }
         default:
             return state
     }
