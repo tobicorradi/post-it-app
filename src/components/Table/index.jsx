@@ -11,7 +11,7 @@ const Table = () => {
         <section className="table">
             <div className="table__inner">
                 <ModalContent />
-                {state.length ? state.map(post => <PostIt text={post.text}/>) : <EmptyList />}
+                {state.length ? state.map(post => <PostIt text={post.text} color={post.color} />) : <EmptyList />}
             </div>
         </section>
     )

@@ -1,5 +1,5 @@
 const initialState = {
-    postList: [{id: 1, text: 'This is a sample text', color: '#33333'}, {id: 2, text: 'This is a sample text', color: '#33333'}]
+    postList: [{id: 1, text: 'This is a sample text', color: '#ffd707'}, {id: 2, text: 'This is a sample text', color: '#ffd707'}]
 }
 
 const postReducer = (state = initialState, action) => {
