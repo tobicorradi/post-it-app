@@ -8,8 +8,10 @@ const PostIt = ({text, color}) => {
     }
     return (
         <Draggable onStart={handleDrag} onStop={handleDrag}>
-            <div style={{background: color}} className={`post-it ${ isDragging ? 'dragging' : ''}`}>
-                <p>{text}</p>
+            <div style={{maxWidth: 176}}>     
+                <div style={{transform: 'rotate(1deg)', background: color}} className={`post-it ${ isDragging ? 'dragging' : ''}`}>
+                    <p style={{transform: 'rotate(-1deg)'}}>{text}</p>
+                </div>
             </div>
         </Draggable>
     )
