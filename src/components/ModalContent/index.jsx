@@ -39,7 +39,7 @@ const ModalContent = () => {
                     <textarea onChange={handleChange} name="text" placeholder="Terminar feature..."></textarea>
                 </form>
                 <Button onClick={handleButton} text={'Cancel'} />
-                <Button onClick={handleSubmit} text={'Guardar'} />
+                <Button type={'submit'} onClick={handleSubmit} text={'Guardar'} />
             </Modal>
         </>
     )
