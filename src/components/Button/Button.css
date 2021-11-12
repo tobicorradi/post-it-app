@@ -3,8 +3,24 @@
     border: 0;
     cursor: pointer;
     border-radius: 2px;
-    background: #188cf3;
     color: white;
     font-weight: bold;
     margin-bottom: 10px;
+    transition: .17s all ease-in-out;
+}
+
+.btn.primary{
+    background: #188cf3;
+    border: 2px solid #188cf3;
+}
+
+.btn.primary:hover{
+    background: #1178d3;
+    border: 2px solid #1178d3;
+}
+
+.btn.secondary{
+    background: transparent;
+    border: 2px solid #188cf3;
+    color: #188cf3;
 }

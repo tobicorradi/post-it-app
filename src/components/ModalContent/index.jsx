@@ -34,7 +34,7 @@ const ModalContent = () => {
     return (
         <>
             <Button style={{marginRight: 7}} onClick={handleModal} text={'Create Post It'} />
-            <Button onClick={() => dispatch(deleteAllPosts())} text={'Delete all'} />
+            <Button buttonType={'secondary'} onClick={() => dispatch(deleteAllPosts())} text={'Delete all'} />
             <Toaster position="bottom-left" reverseOrder={false}/>
             <Modal isOpen={modalIsOpen} ariaHideApp={false}>
                 <h2>Crea tu post it</h2>
