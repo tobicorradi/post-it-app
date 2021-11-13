@@ -12,6 +12,9 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     z-index: 2;
  }
+ .post-it.active {
+   outline: 3px solid #1c8cf3;
+}
  .post-it p {
     font-family: helvetica;
     font-size: 1.2em;

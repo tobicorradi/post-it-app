@@ -12,7 +12,7 @@ const PostIt = ({text, color}) => {
         <Draggable onStart={handleDrag} onStop={handleDrag}>
             <div onClick={() => setActive(true)} style={{maxWidth: 176}}>     
                 {active ? <ThreeDots /> : null}
-                <div style={{transform: 'rotate(1deg)', background: color}} className={`post-it ${ isDragging ? 'dragging' : ''}`}>
+                <div style={{transform: 'rotate(1deg)', background: color}} className={`post-it ${ isDragging ? 'dragging' : ''}${ active ? 'active' : ''}`}>
                     <p style={{transform: 'rotate(-1deg)'}}>{text}</p>
                 </div>
             </div>
