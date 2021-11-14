@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <header>
             <h1>Post It App</h1>
-            {state !== '' ? <Button onClick={handleLogOut} text={"LogOut"}/> : null}
+            {username !== '' ? <Button style={{marginBottom: 0}} onClick={handleLogOut} text={"LogOut"}/> : null}
         </header>
     )
 }
