@@ -7,7 +7,8 @@ import EmptyList from './../EmptyList'
 
 const Table = () => {
     const dispatch = useDispatch()
-    const state = useSelector(state => state.postList)
+    const state = useSelector(state => state.post.postList)
+    console.log('el state es', state)
     return (
         <section className="table">
             <div className="table__inner">

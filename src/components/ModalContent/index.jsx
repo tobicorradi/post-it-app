@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const ModalContent = () => {
     const dispatch = useDispatch()
-    const state = useSelector(state => state.postList)
+    const state = useSelector(state => state.post.postList)
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [newPost, setNewPost] = useState({
         id: state.length + 1,
