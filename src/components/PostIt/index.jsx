@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Draggable from 'react-draggable'
 import {ReactComponent as ThreeDots} from './../../assets/icons/dots.svg'
+import { Rnd } from 'react-rnd'
 import './PostIt.css'
 const PostIt = ({text, color}) => {
     const [active, setActive] = useState(false)
@@ -9,14 +10,14 @@ const PostIt = ({text, color}) => {
         setIsDragging(!isDragging)
     }
     return (
-        <Draggable onStart={handleDrag} onStop={handleDrag}>
+        <Rnd style={{transform: 'rotate(1deg)', background: color}} className={`post-it ${ isDragging ? 'dragging' : ''}${ active ? 'active' : ''}`}>
             <div onClick={() => setActive(true)} style={{maxWidth: 176}}>     
                 {active ? <ThreeDots /> : null}
-                <div style={{transform: 'rotate(1deg)', background: color}} className={`post-it ${ isDragging ? 'dragging' : ''}${ active ? 'active' : ''}`}>
+                <div className={`${ active ? 'active' : ''}`}>
                     <p style={{transform: 'rotate(-1deg)'}}>{text}</p>
                 </div>
             </div>
-        </Draggable>
+        </Rnd>
     )
 }
 
