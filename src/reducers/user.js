@@ -23,6 +23,8 @@ const userReducer = (state = initialState, action) => {
                     auth: false
                 }
             }
+        default:
+            return state
     }
 
 }
